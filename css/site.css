@@ -1,0 +1,207 @@
+body {
+  /* min-height: 2000px;
+  padding-top: 70px; */
+
+  margin-bottom: 60px;
+}
+
+.og {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  margin: 3px;
+
+  /* box-shadow: 120px 80px 40px 20px #0ff; */
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+div.og {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  color: #000;
+  background: linear-gradient(to bottom, #393939 0%, #151515 100%);
+  position: relative;
+}
+div.og:before {
+  content: "";
+  width: 106px;
+  height: 106px;
+  border-radius: 30px;
+  background: #19f000;
+  border: 1px solid black;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+div.og:after {
+  content: "";
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: absolute;
+  transform: rotate(-18deg);
+  left: 13px;
+  top: 9px;
+}
+
+.fb {
+  width: 150px;
+  height: 150px;
+  /* background-color: #fff; */
+  color: #fff;
+  margin: 3px;
+  /* box-shadow: 120px 80px 40px 20px #0ff; */
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+}
+
+div.fb {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+/* .modal-dialog {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+} */
+
+/* @media(max-width: 768px) {
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
+} */
+
+.full {
+  /* background-color: #000;
+  color: #fff; */
+  background:
+    /* top, transparent red, faked with gradient */ linear-gradient(
+    rgba(255, 0, 0, 0.45),
+    rgba(255, 0, 0, 0.45)
+  );
+  /* bottom, image */
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  /* background-color: DodgerBlue; */
+}
+
+.flex-container > div {
+  /* background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px; */
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container > div h2 {
+  position: relative;
+  z-index: 201;
+  /* color: #000; */
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+box-sizing: border-box;
+}
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity .3s ease;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 40px auto 0;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.form-label>.form-control {
+  margin-top: 0.5em;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5em 1em;
+  line-height: 1.5;
+  border: 1px solid #ddd;
+
+  /*
+* The following styles are auto-applied to elements with
+* transition="modal" when their visibility is toggled
+* by Vue.js.
+*
+* You can easily play with the modal transition by editing
+* these styles.
+*/
+
+  .modal-enter {
+    opacity: 0;
+  }
+
+  .modal-leave-active {
+    opacity: 0;
+  }
+
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+
